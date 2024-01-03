@@ -136,3 +136,6 @@ nav ul li a:hover::after{
 }
 
 /*Project sections of the CSS*/
+#services{
+    padding: 30px 0;
+}
