@@ -160,3 +160,8 @@ nav ul li a:hover::after{
     font-weight: 300;
     border-radius: 10px;
 }
+
+.project-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
