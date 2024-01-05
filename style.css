@@ -205,3 +205,14 @@ nav ul li a:hover::after{
     border-radius: 10px;
     display: block;
 }
+
+/*contact*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
