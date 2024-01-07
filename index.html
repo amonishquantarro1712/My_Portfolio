@@ -49,31 +49,27 @@
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
-
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
-                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                        <li><span>Web Development</span><br>Web app Development</li>
-                        <li><span>App Development</span><br>Bulding Android apps</li>
+                        <li><span>Java</span><br>Interface UI</li>
+                        <li><span>App Development</span><br>Building Android Apps</li>
+                        <li><span>JavaScript and React</span><br>Used to build an e-commerce website</li>
                     </ul>
                 </div>
-
-                <div class="tab-contents active-tab" id="experience">
+                <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                        <li><span>Web Development</span><br>Web app Development</li>
-                        <li><span>App Development</span><br>Bulding Android apps</li>
+                        <li><span>Java</span><br>Interface UI</li>
+                        <li><span>App Development</span><br>Building Android Apps</li>
+                        <li><span>JavaScript and React</span><br>Used to build an e-commerce website</li>
                     </ul>
                 </div>
-
-                <div class="tab-contents active-tab" id="education">
+                <div class="tab-contents" id="education">
                     <ul>
-                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                        <li><span>Web Development</span><br>Web app Development</li>
-                        <li><span>App Development</span><br>Bulding Android apps</li>
+                        <li><span>Java</span><br>Interface UI</li>
+                        <li><span>App Development</span><br>Building Android Apps</li>
+                        <li><span>JavaScript and React</span><br>Used to build an e-commerce website</li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </div>
@@ -145,12 +141,13 @@
                 <a href="images/MONISH_RESUME.pdf" download class="btn">Download Resume</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn2">submit</button>
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
@@ -177,7 +174,7 @@
         }
         for(tabcontent of tabcontents)
         {
-            tabcontent.classList.remove("active-tab")
+            tabcontent.classList.remove("active-tab");
         }
         /**
          * This is used to let the user identify which tabs they are veiwing currently.
@@ -203,5 +200,23 @@
     }
 </script>
 
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzt47zfSnrFySNwPWtPOrqCR4yDvPUaex-b61BffF8e4mbgTHdLNRQdqBt5NPtlq96k/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg =  document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innetHTML = "Message sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
