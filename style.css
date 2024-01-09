@@ -8,8 +8,8 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: #000000;
-    color: #f9f8f8;
+    background: #ffffff;
+    color: #000000;
 }
 #header{
     width: 100%;
@@ -39,7 +39,7 @@ nav ul li{
 }
 
 nav ul li a{
-    color: rgb(234, 234, 234);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -49,7 +49,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #eb0a0a;
+    background: #000000;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -67,13 +67,13 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 .header-text h1 span{
-    color: #eb0a0a;
+    color: #ff0404;
 }
 
 /*About sections of the CSS*/
 #about{
     padding: 80px 0;
-    color: #ffffff;
+    color: #000000;
 }
 .row{
     display: flex;
@@ -92,7 +92,7 @@ nav ul li a:hover::after{
 .sub-title{
     font-size: 60px;
     font-weight: 600;
-    color: #ffffff;
+    color: #000000;
 }
 
 .tab-titles{
@@ -110,7 +110,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff0000;
+    background: #000000;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -127,7 +127,7 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li span{
-    color: #ee0000;
+    color: #000000;
     font-size: 14px;
 }
 
@@ -160,7 +160,7 @@ nav ul li a:hover::after{
 }
 
 .project-list div{
-    background: #262626;
+    background: #ffffff;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -179,7 +179,7 @@ nav ul li a:hover::after{
 }
 .project-list div a{
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
@@ -223,7 +223,7 @@ nav ul li a:hover::after{
     margin-top: 30px;
 }
 .contact-left p i{
-    color: #eb0a0a;
+    color: #000000;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -234,23 +234,23 @@ nav ul li a:hover::after{
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: #ababab;
+    color: #000000;
     display: inline-block;
     transition: transform 0.5s;
 }
 .social-icons a:hover{
-    color: #ff0000;
+    color: #f00000;
     transform: translateY(-5px);
 }
 .btn{
     display: inline-block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ffffff;
+    border: 1px solid #000000;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     transition: transform 0.5s;
 }
 .btn:hover{
@@ -260,7 +260,7 @@ nav ul li a:hover::after{
     display: inline-block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #b31111;
+    border: 1px solid #000000;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -294,7 +294,7 @@ form .btn2{
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #262626;
+    background: #000000;
     font-size: 300;
     margin-top: 20px;
 }
@@ -318,7 +318,7 @@ nav .fa-solid{
         font-size: 25px;
     }
     nav ul{
-        background: #ee0000;
+        background: #000000;
         position: fixed;
         top: 0;
         right: -200px;
